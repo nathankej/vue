@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>leeson1</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <input type="text" v-model='message' @keyup.enter='add()'>
+        <p>{{ message }}</p>
+        <ul> 
+            <li v-for='(i,k) in todoList' @click='remove(k)'>
+                {{i}}
+            </li>
+        </ul>
+    </div>
+    <script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            message: 'Hello Vue!',
+            todoList:[
+                'todo1',
+                'todo2',
+                'todo3',
+                'todo4',
+                'todo5'
+            ],
+        },
+        methods:{
+            add:function(){
+                console.log(app.message);
+                if (app.message != ''){
+                    app.todoList.push(app.message);
+                    app.message = '';
+                }   
+            },
+            remove:function(i){
+                app.todoList.splice(i,1);
+
+            }
+        }
+    })
+    </script>
+</body>
+</html>

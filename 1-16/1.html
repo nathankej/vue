@@ -1,0 +1,25 @@
+cli脚手架项目下 
+运行项目 ：npm run serve / vue-cli-service serve (logo.82b9c7a5.png)
+打包项目：npm run build
+public文件夹：放一些静态资源，比如 图片 音频等等。（不会这些静态资源打包进去）
+src文件夹：vue项目的相关文件。
+    assets:这会被Vue项目打包。
+dist 文件夹：打包之后的文件。（npm run build 在package.json文件当中有描述怎么运行和打包。vue-cli-service build）
+
+一，组件。
+    1，引入组件，（使用import 到文件夹中找到对应组件）
+    2，注册组件（在components对象当中注册）
+    3，使用组件（把组件当作HTML标签使用就行了。）
+    4, 组件里面style的 scope属性 让css变成局部的。
+    5，组件有 template  script style 三个部分构成
+        template里面 只能有一个Div标签。
+        script 里面要有 export default ｛｝
+    6,参数传递 （在父组件当中 给子组件添加属性，子组件 使用props属性进行访问）
+        参数传递只能一级一级向下传递。
+    7,不能使用HTML标签名字作为组件名字，应该使用大写进行区分！
+二 ，安装插件
+    1，安装Vue-router 路由
+        使用 npm install --save vue-router
+        新建router.js 引入Vue，声明router
+        在main.js当中引用 router组件
+        在需要使用 路由的Vue文件当中 使用 router-view 标签来进行渲染页面 （router-link标签 进行页面跳转，在各个页面当中 console出this.$router）

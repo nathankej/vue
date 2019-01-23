@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css" /> -->
+    <!-- Latest compiled and minified CSS -->
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
+
+    <!-- Optional theme -->
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous"> -->
+
+    <!-- Latest compiled and minified JavaScript -->
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> -->
+    
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> -->
+    
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <style>
+        *{
+            box-sizing: border-box
+        }
+        .container{
+            max-width: 600px;
+            margin:0 auto;
+        }
+        #app{
+            font-family: 'Times New Roman', Times, serif;
+            text-align: center;
+            margin-top: 60px;
+            font-size: 20px;
+        }
+        ul{
+            list-style-type: none;
+        }
+        li{
+            text-align: left;
+            display: inline-block;
+            margin:0 10px;
+        }
+        .select{
+            background: black;
+            color:white;
+        }
+    </style>
+
+</head>
+<body position='relative'>
+    <div id="app" class="container">
+        <input type="text" v-model='message' @keyup.enter='add()' class="form-control">
+        <p>你输入的文字是：{{ message }}</p>
+
+        <input type="text" v-bind:value="reversedMessage">
+        <p>你输入的文字反过来： {{reversedMessage}}</p>
+        <ul class="list-group"> 
+            <li v-for='(item,k) in todoList' class="list-group-item " v-bind:class="{select:item.isSelect}" @click="change(item)">
+                {{item.msg}}<button class="btn btn-default pull-right"   @click = 'remove(k)'>x</button>
+            </li>
+        </ul>
+        <div>
+            <input type="text" v-model='numberOne'>
+            <input type="text" v-model='numberTwo'>
+            <p>运算结果：{{answer}}</p>
+        </div>
+    </div>
+    <script>
+        //这里的app 变量就是一个Vue实例、
+        var app = new Vue({
+            el: '#app',//el变量声明了 这个实例需要挂载的Dom节点
+            data: {
+                message: 'Hello Vue!',
+                todoList:[
+                    {msg:'todo',isSelect:false},//这里单个对象对应了 V-for循环里面的Item
+                    {msg:'todo',isSelect:false},
+                    {msg:'todo',isSelect:false},
+                ],
+                isSelect:10, //绑定Class需要用到变量 应该是 一个布尔型 
+                numberOne: 10,
+                numberTwo: 20,
+            },
+            methods:{
+                add:function(){
+                    if (app.message != ''){
+                        /*
+                        *  msg 储存 文字,isSelect 储存选中状态 NewItem作为临时在函数中使用的变量
+                        */
+                        var NewItem = {
+                            msg:app.message,
+                            isSelect:false
+                        };
+                        app.todoList.push(NewItem);
+                        app.message = '';
+                    }   
+                },
+                remove:function(i){
+                    app.todoList.splice(i,1);
+                },
+                change:function(item){
+                    item.isSelect = !item.isSelect
+                }
+            },
+            computed:{
+                /*
+                * computed 里面的东西包含Get和Set 两个函数。
+                */
+                reversedMessage:{
+                // `this` 指向 vm 实例
+                    get(){
+                        return this.message.split('').join('-')
+                    },
+                    //todo
+                    set(value){
+                        this.message = value
+                    }
+                },
+                //两个输入框输入数字，计算a*b 或者a+b 
+                answer:function(){
+                    return this.numberOne*this.numberTwo;
+                }
+            },
+            watch:{
+                numberTwo:function(){
+                    if(this.numberTwo>100){
+                        console.log('this number is greater than 100');
+                    }
+                }
+            },
+            
+            // 生命周期函数 beforeCreate Created beforeMount mounted beforeUpdate updated beforeDestory destroyed 
+            beforeCreate:function(){
+                console.log('beforeCreate')//进入页面之前 ，处理前一个页面传递过来的参数 
+            },
+            created:function(){
+                console.log('created') //处理请求。准备好Data
+            },
+            beforeMount:function(){
+                console.log('beforeMount')
+            },
+            mounted:function(){
+                console.log('mounted')//在这里就可以开始进行dom操作。比如 document.querySelector() ..
+            },
+            beforeUpdate:function(){
+                console.log('beforeUpdate') //数据在更新，但页面还未更新。
+            },
+            updated:function(){
+                console.log('updated') //类似于mouted 页面已经更新完毕了，可以进行dom操作。
+            },
+
+            /*
+            * 后面 讲Vue-router的时候 观察页面路径变化的时候观看效果。
+            */
+            beforeDestory:function(){
+                console.log('beforeDestory');//在页面消失之前，
+                alert('beforeDestory')
+            },
+            destroyed:function(){
+                console.log('destroyed');
+                alert('destroyed')     
+            //页面离开后执行
+            }
+            
+
+        })
+        </script>
+</body>
+</html>
