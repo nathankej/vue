@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /**
+        * flex-direction row column row-reverse column-reverse 子元素排列方向 默认row
+        * flex-wrap wrap nowrap wrap-reverse 默认nowrap
+        * flex-flow: <flex-direction> <flex-wrap>
+        * justify-content: flex-start | flex-end | center | space-between | space-around;规定子元素对其方式。
+        * align-items 
+        * 子元素定义属性
+        * flex-grow 定义当前元素为其他项的多少倍
+        * flex-shrink 定义其他项是当前元素的多少倍的多少倍
+        */
+        .box{
+            width:800px;
+            height:500px;
+            background-color: blue;
+            padding:2px;
+            display: flex;
+            flex-direction:row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+          /**align-items: stretch;*/
+        }
+        .item{
+            background-color: red;
+            margin: 5px;
+            flex:1;
+        }
+    </style>
+</head>
+<body>
+    <div class='box'>
+        <div class='item'>1</div>
+        <div class='item'>2</div>
+        <div class='item' style="flex:2;">3</div>
+        <div class='item'>4</div>
+        <div class='item'>5</div>
+    </div>
+</body>
+</html>

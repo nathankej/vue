@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <style>
+    .container{
+      display:flex;
+      flex-direction:row;
+      width:1080px;
+      height:960px;
+      border:2px solid black;
+    }
+    .item{
+      flex-grow:1;
+    }
+    .left{
+      display:flex;
+      flex-direction:column
+    }
+    .mid{
+      flex-grow:3;
+    }
+    .topleft{
+      background-color:red;
+      flex-grow:1;
+    }
+    .botleft{
+      background-color:yellow;
+      height:300px;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <div class="item left">
+        <div class="topleft">
+
+        </div>
+        <div class="botleft">
+
+        </div>
+      </div>
+      <div class="item mid">
+        2
+      </div>
+      <div class="item">
+        3
+      </div>
+    </div>
+  </body>
+</html>

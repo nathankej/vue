@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src='../vue.min.js'></script>
+  
+</head>
+
+<body>
+    <!-- 
+        v-show    display
+        v-if      delete element 
+    -->
+    <div id='div1'>
+        {{name}}
+        {{a}}
+        <input type="button" value='+1' @click='fn(8)'> 
+        <div class='box' v-show='b'>
+        
+        </div>
+        <input type="button" value="show" @click='fn1()'>
+    </div>
+</body>
+
+<script>
+    let vm = new Vue({
+        el:'#div1',
+        data:{
+            name:'blue',
+            a:16,
+            c:true,
+            b:false
+        },
+        methods:{
+            fn(n){
+                this.a+=n
+            },
+            fn1(){
+                this.b=!this.b
+            }
+        }
+    })
+</script>
+
+
+<style>
+    .box{
+        width: 200px;
+        height:100px;
+        background: gray;
+        display: block
+    }
+</style>
+</html> 

@@ -1,0 +1,104 @@
+.full-width.demand
+  margin-top 1px
+  background-color #f5f5f5
+  padding 50px 0 200px 0
+  .table
+    position relative
+    width 1020px
+    margin 0 auto
+    background-color white
+    border-radius 10px
+    padding 50px
+    .table-box
+      position relative
+      margin-bottom 20px
+      &:after
+        display block
+        clear both
+        content ''
+      .tr
+        float left
+        font-size 16px
+        font-weight bold
+        line-height 24px
+        width 80px
+        text-align right
+        margin-right 30px
+      .td.row
+        float left
+        position relative
+        width 810px
+        line-height 24px
+        :after
+          display block
+          clear both
+          content ''
+        .td-select
+          width 15%
+          height 20px
+          float left
+          color #038aeb
+          margin-bottom 20px
+          cursor pointer
+          &:hover
+            text-shadow #038aeb 0 0 2px
+            transition 0.5s
+        .td-tile
+          width 60px
+          font-weight bold
+          float left
+          margin-right 25px
+        .td-box
+          float left
+          width 700px
+          :after
+            display block
+            clear both
+            content ''
+          .td-item
+            width 16%
+            float left
+            margin-bottom 5px
+            cursor pointer
+        textarea
+          width 700px
+          height 150px
+          resize none
+          padding 10px
+        input
+          width 270px
+          height 37px
+          border 1px solid #ccc
+          outline none
+          vertical-align top
+          line-height 37px
+          padding 5px 0 5px 20px
+        .codelabel
+          position absolute
+          left 180px
+          top 6px
+          cursor pointer
+          &:hover
+            color #038aeb
+          &:before
+            display inline-block
+            content ""
+            width 1px
+            height 16px
+            background-color #ccc
+            margin-right 10px
+            transform translateY(3px)
+    a.btn
+      width 160px
+      height 40px
+      line-height 40px
+      border 1px solid #038aeb
+      border-radius 6px
+      display block
+      text-align center
+      color #038aeb
+      font-size 18px
+      margin 50px auto 0
+      &:hover
+        background-color #038aeb
+        color #ffffff

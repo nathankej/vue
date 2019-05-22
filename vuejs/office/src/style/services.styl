@@ -1,0 +1,205 @@
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+input[type="number"]{
+  -moz-appearance: textfield;
+}
+.container.main{
+  margin-top: 50px;
+
+}
+div.service{
+  margin-bottom: 20px;
+  margin-top: 60px;
+  min-height: 500px;
+}
+div.service:after{
+  display: block;
+  content: '';
+  clear: both;
+}
+div.main:after{
+  display: block;
+  content: '';
+  clear: both;
+}
+div.mainl{
+  width: 880px;
+  float: left;
+  margin-right: 20px;
+}
+div.classify{
+  user-select:none;
+}
+div.mainr{
+  width: 280px;
+  float: left;
+}
+/*服务分类*/
+div.tr{
+  width: 880px;
+  margin-bottom: 30px;
+  border-radius: 6px;
+  display: block;
+  background-color: #f2f2f2;
+}
+div.tr:after{
+  display: block;
+  content: '';
+  clear: both;
+}
+div.td-title{
+  width: 120px;
+  height: 60px;
+  font-size: 16px;
+  font-weight: bold;
+  text-indent: 20px;
+  line-height: 60px;
+  float: left;
+}
+div.td{
+  width:760px;
+  float: left;
+}
+div.td:after{
+  clear: both;
+  display: block;
+  content: '';
+}
+.td-item{
+  min-width:84px;
+  max-width:95px;
+  height: 40px;
+  line-height: 40px;
+  margin-top: 10px;
+  float: left;
+}
+.td-item.moren{
+    min-width 60px
+  }
+.td-item.right{
+  text-align right
+  min-width 150px
+  float right
+  margin-right 20px
+}
+img.migi{
+  transform rotate(90deg)
+  cursor pointer
+}
+img.hidari{
+  transform rotate(-90deg)
+  cursor pointer
+}
+/*服务列表*/
+
+/*分页*/
+.page{
+  min-width: 502px;
+  height: 40px;
+  line-height: 40px;
+  margin-bottom: 180px;
+  text-align: center;
+  font-weight: bold;
+  margin-top: 60px;
+}
+ul.page-control{
+  display: inline-block;
+}
+ul.page-control li{
+  display: inline-block;
+}
+li.page-item{
+  border-radius: 6px;
+  border:solid 1px #cccccc;
+  margin-right: 10px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+li.page-item span{
+  display: block;
+}
+li.page-item.more-page{
+  border: none;
+}
+li.page-item.active,li.page-item:hover{
+  border: none;
+  color: white;
+  background-color: #038aeb;
+}
+li.page-up,li.page-down{
+  width: 60px;
+}
+.page-jump{
+  display: inline-block;
+}
+.page-jump input{
+  width: 40px;
+  height: 40px;
+  border-radius: 6px;
+  border:solid 1px #cccccc;
+  outline: none;
+  margin: 0 6px;
+  text-align: center;
+}
+/*企业推荐*/
+.good-company{
+  width: 280px;
+  min-height: 135px;
+  margin-bottom: 20px;
+  background-color: #f2f2f2;
+  border-radius: 6px;
+  padding: 20px 10px 10px;
+}
+.company-img{
+  float: left;
+  width: 80px;
+  height: 80px;
+  background-color: black;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  cursor pointer
+}
+.company-img img{
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.company-detail {
+  float: left;
+  max-width: 170px;
+  height: 80px;
+  margin-left: 10px;
+  transform: translateY(-5px);
+}
+.company-detail p{
+  width: 170px;
+  margin-bottom: 19px;
+}
+.company-title{
+  font-size: 16px;
+  font-weight: bold;
+}
+.company-title:hover{
+  color #038aeb
+  cursor pointer
+}
+.company-odds,.add-city{
+  float: right;
+}
+.company-operation{
+  line-height: 17px;
+  margin-top: 90px;
+}
+a.select{
+  color: #038aeb;
+}
+.td-item img{
+  margin-left 3px
+}
+a.select.asc img{
+  transform rotate(180deg)
+}

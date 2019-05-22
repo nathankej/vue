@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        {{ msg}}
+        {{msg2}}
+    </div>
+    <script type="text/javascript" src='../vue.min.js'></script>
+    <script>
+        new Vue({
+            el:'#app',
+            template:'<div> <div v-if="isShow"> 1111</div> </div>',
+            data:function(){
+                return{
+                    msg:'text',
+                    msg2: 1==1,
+                    isShow:true               
+                }
+            }
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,179 @@
+
+
+#account
+  position relative
+  width 880px
+  min-height 668px
+  border-radius 6px
+  background-color white
+  border 1px solid white
+  .tab
+    height 80px
+    line-height 80px
+    ul
+      height 80px
+      box-sizing border-box
+      border-bottom 1px solid #ccc
+      li
+        height 80px
+        box-sizing border-box
+        display inline-block
+        margin-left 50px
+        font-size 16px
+        color #555
+        &.active
+          border-bottom 2px solid #333
+        a
+          display block
+  .main-content
+    position relative
+    box-sizing border-box
+    border: 1px solid white;
+    .info
+      position relative
+      width 600px
+      min-height 600px
+      margin  50px
+      tr
+        display block
+        margin-bottom 20px
+        td.taile
+          width 110px
+          text-align right
+          height 50px
+          line-height 50px
+          padding-right 20px
+          font-size 16px
+          color #555555
+        td.taile.ressd:before
+          display inline-block
+          content '* '
+          color red
+          margin-right 3px
+          transform translateY(2px)
+        td.input input
+          width 500px
+          padding 20px
+          height 50px
+          line-height 50px
+          background-color #f2f2f2
+          border-radius 6px
+          border solid 1px #cccccc
+          outline none
+        td.input .avatar
+          position relative
+          img
+            width 100px
+            height 100px
+            display inline-block
+            background-color #fff
+            border-radius 50%
+          .btn
+            display inline-block
+            padding 6px 8px
+            border 1px solid #038aeb
+            border-radius 6px
+            color #038aeb
+            margin-left 10px
+            font-size 16px
+            transform translateY(32px)
+            &:hover
+              color white
+      .commit .btn
+        width 80px
+        height 35px
+        line-height 35px
+        font-size 16px
+        display inline-block
+        border #038aeb 1px solid
+        border-radius 6px
+        text-align center
+        color #038aeb
+        margin-left 30px
+        &:hover
+          color white
+          background-color #038aeb
+
+    .safe
+      width 100%
+      padding 23px 50px
+      &-form
+        border 1px solid white
+        .tr
+          height 70px
+          line-height 70px
+          margin-bottom 5px
+          border-bottom 1px solid #ccc
+          &:after
+            clear both
+            content ''
+            display block
+          .td-tile
+            float left
+            width 75px
+            text-align right
+            font-size 15px
+            color #555
+          .td-cont
+            float left
+            width 699px
+            font-size 15px
+            color #555
+            padding-left 15px
+            p
+              display inline-block
+              width 450px
+            .action
+              width 100px
+              height 40px
+              line-height 40px
+              text-align center
+              border 1px solid #038aeb
+              border-radius 6px
+              float right
+              margin-top 15px
+              color #038aeb
+              &:hover
+                color white
+                background-color #038aeb
+              &.unact
+                border 1px solid #ccc
+                color #333
+                margin-right 10px
+                &:hover
+                  background-color #e8e8e8
+                  color #33
+    .password
+      padding 50px
+      position relative
+      tr
+        display block
+        margin-bottom 20px
+        td.tile
+          width 100px
+          text-align right
+          height 50px
+          line-height 50px
+          padding-right 20px
+          font-size 16px
+          color #555555
+        td.input input
+          width 500px
+          padding 20px
+          height 50px
+          line-height 50px
+          background-color #f2f2f2
+          border-radius 6px
+          border solid 1px #cccccc
+          outline none
+        .btn
+          display inline-block
+          padding 6px 8px
+          border 1px solid #038aeb
+          font-size 16px
+          border-radius 6px
+          color #038aeb
+          width 80px
+          text-align center
+          &:hover
+            color white

@@ -1,0 +1,16 @@
+/*
+* margin 可以直接放多个参数  margin ｛0 auto｝ 上下外边距0 左右自动   ｛0 auto 50px｝ 上 0 左右自动 下 50px
+* ｛ 0 50px 50px 0｝ 上0 右50px 下 50px 左0 
+*/
+.container{
+    width:960px;
+    display:block;
+    margin: 0 auto; 
+}
+
+.item-img{
+    width:260px
+}
+.clearfloat{
+    clear:both;
+}

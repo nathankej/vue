@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+      .container{
+        height:980px;
+        width:1080px;
+        border:2px solid black;
+        display:flex;
+        flex-direction:row;
+      }
+      .column{
+        display:flex;
+        flex-direction:column;
+        flex-grow:1;
+      }
+      .mid{
+        flex-grow:3;
+      }
+      .topone{
+        background-color:green;
+        flex-grow:1;
+      }
+      .botone{
+        background-color:black;
+        height:300px
+      }
+      .topthree{
+        flex-grow:1;
+        background-color:green;
+      }
+      .botthree{
+        background-color:black;
+        height:200px
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="column">
+        <div class="topone">
+
+        </div>
+        <div class="botone">
+
+        </div>
+      </div>
+      <div class="column mid">
+
+      </div>
+      <div class="column">
+        <div class="topthree">
+
+        </div>
+        <div class="botthree">
+
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

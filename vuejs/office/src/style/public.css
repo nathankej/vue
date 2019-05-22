@@ -1,0 +1,189 @@
+
+/*公共样式表*/
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: "PingFangSC-Regular", "Microsoft YaHei", "\5FAE\8F6F\96C5\9ED1", "STHeiti", "WenQuanYi Micro Hei", SimSun, sans-serif;
+  transition: 0.1s;
+}
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+@font-face{
+  font-family:aldo;
+  src:url('Aldo.ttf');
+}
+@font-face{
+  font-family:ice;
+  src:url('icedeart.ttf');
+}
+@font-face{
+  font-family:Poly;
+  src:url('PolytoneReliant.otf');
+}
+
+html,body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, button, textarea, p, blockquote, th, td {
+  margin: 0;
+  padding: 0;
+}
+.sm-font{
+  font-size: 12px;
+  line-height: 12px;
+}
+body {
+  background: #fff;
+  color: #555;
+  font-size: 14px;
+  font-family: "Arial", "Microsoft YaHei", "黑体", "宋体", sans-serif;
+}
+td, th, caption {
+  font-size: 14px;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+  font-size: 100%;
+}
+address, caption, cite, code, dfn, em, strong, th, var {
+  font-style: normal;
+  font-weight: normal;
+}
+a{
+  font-family: "Arial", "Microsoft YaHei", "黑体", "宋体", sans-serif;
+  font-weight: normal;
+  font-stretch: normal;
+  color: #333333;
+  text-decoration: none;
+}
+a.btn:hover{
+  background-color: #038aeb;
+  color: white;
+}
+a:hover {
+  color: #038aeb;
+  cursor: pointer;
+}
+img {
+  border: none;
+  vertical-align: middle;
+}
+ol, ul, li {
+  list-style: none;
+}
+input, textarea, select, button {
+  font: 14px "Arial", "Microsoft YaHei", "黑体", "宋体", sans-serif;
+}
+table {
+  border-collapse: collapse;
+}
+
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: inline-block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.clearfix {
+  *zoom: 1;
+}
+
+/*公共类*/
+.fl {
+  float: left
+}
+.fr {
+  float: right
+}
+.al {
+  text-align: left
+}
+.ac {
+  text-align: center
+}
+.ar {
+  text-align: right
+}
+.hide {
+  display: none
+}
+
+
+/*=================
+   GRID 网格布局
+=================*/
+.full-width{
+  width: 100%;
+  min-width: 1200px;
+}
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0 10px;
+  position: relative;
+}
+.row {
+  justify-content: space-between;
+  /*min-width: 1200px;*/
+  width: 100%;
+}
+.row:before,.row:after{
+  content: " ";
+  display: block;
+  clear: both;
+  visibility: hidden;
+}
+.row .col,
+.row [class^="col-"],
+.row [class*=" col-"] {
+  padding: 0;
+  float: left;
+}
+.row .col-1 {
+  width: 8.333333333333332%;
+}
+.row .col-2 {
+  width: 16.666666666666664%;
+}
+.row .col-3 {
+  width: 25%;
+}
+.row .col-4 {
+  width: 33.33333333333333%;
+}
+.row .col-5 {
+  width: 41.66666666666667%;
+}
+.row .col-6 {
+  width: 50%;
+}
+.row .col-7 {
+  width: 58.333333333333336%;
+}
+.row .col-8 {
+  width: 66.66666666666666%;
+}
+.row .col-9 {
+  width: 75%;
+}
+.row .col-10 {
+  width: 83.33333333333334%;
+}
+.row .col-11 {
+  width: 91.66666666666666%;
+}
+.row .col-12 {
+  width: 100%;
+}
+
+/*fade动画公共样式*/
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .3s;
+}
+.fade-enter, .fade-leave-to{
+  opacity: 0;
+}

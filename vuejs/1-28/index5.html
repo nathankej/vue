@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+      .container{
+        height:980px;
+        width:1080px;
+        display:flex;
+        flex-direction:row;
+        border: 2px solid purple;
+      }
+      .column{
+        flex-grow:1;
+        border: 2px solid black;
+        display:flex;
+        flex-direction:column;
+      }
+      .three{
+        flex-grow:3;
+      }
+      .topone{
+        background-color:silver;
+        flex-grow:1;
+      }
+      .botone{
+        height:250px;
+        background-color:green;
+      }
+      .topfour{
+        background-color:black;
+        flex-grow:1;
+      }
+      .botfour{
+        height:250px;
+        background-color:green;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="column">
+        <div class="topone">
+
+        </div>
+        <div class="botone">
+
+        </div>
+      </div>
+      <div class="column">
+        <div class="topone">
+
+        </div>
+        <div class="botone">
+
+        </div>
+      </div>
+      <div class="column three">
+
+      </div>
+      <div class="column">
+        <div class="topfour">
+
+        </div>
+        <div class="botfour">
+
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
